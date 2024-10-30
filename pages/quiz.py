@@ -8,7 +8,7 @@ st.subheader("3 questions - 3 erreurs possibles max")
 # Définition d'une liste de dictionnaires contenant les questions, les propositions et les bonnes réponses
 list_quest_answ = [
      {
-        "question": "En quelle année est sortie l'album **Nevermind**, de **Nirvana** ?",
+        "question": "En quelle année est sorti l'album **Nevermind**, de **Nirvana** ?",
         "propositions": ["1979", "1987", "1991", "1995"],
         "correct_answer": 3
     },
@@ -59,10 +59,6 @@ if st.session_state.question_nb < len(list_quest_answ)+1 and st.session_state.nb
                 st.warning(f"Il ne vous reste plus que {st.session_state.nb_remaining_errors} erreurs possibles", icon="⚠️")
 
 # Fin du quiz
-#st.write(f"Remaining errors : {st.session_state.nb_remaining_errors}")
-#st.write(f"Question nb : {st.session_state.question_nb}")
-#st.write(f"Nb total questions : {len(list_quest_answ)}")
-
 if st.session_state.nb_remaining_errors == 0:
     st.error("Vous avez perdu", icon="💀")
 elif st.session_state.question_nb > len(list_quest_answ):
