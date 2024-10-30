@@ -32,7 +32,7 @@ if "nb_remaining_errors" not in st.session_state:
 if st.session_state.question_nb < len(list_quest_answ)+1 and st.session_state.nb_remaining_errors > 0:
     # Affichage de la question
     current_question = list_quest_answ[st.session_state.question_nb - 1]
-    st.write(f"Question {st.session_state.question_nb} : {current_question["question"]}")
+    st.write(f"Question {st.session_state.question_nb} : {current_question['question']}")
 
     # Affichage des options
     propositions = current_question["propositions"]
