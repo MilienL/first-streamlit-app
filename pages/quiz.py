@@ -64,6 +64,3 @@ if st.session_state.nb_remaining_errors == 0:
 elif st.session_state.question_nb > len(list_quest_answ):
     st.success("Bravo champion.ne ! Tu as trouvé toutes les bonnes réponses")
     st.balloons()
-
-
-
