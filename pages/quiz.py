@@ -8,16 +8,19 @@ st.subheader("3 questions - 3 erreurs possibles max")
 # Définition d'une liste de dictionnaires contenant les questions, les propositions et les bonnes réponses
 list_quest_answ = [
      {
+        "image": "Logo-Nirvana.jpg",
         "question": "En quelle année est sorti l'album **Nevermind**, de **Nirvana** ?",
         "propositions": ["1979", "1987", "1991", "1995"],
         "correct_answer": 3
     },
     {
+        "image": "Rolling-Stones-logo.png",
         "question": "Qui n'a jamais été membre des **Rolling Stones** ?",
         "propositions": ["Angus Young", "Keith Richards", "Charlie Watts", "Mick Jagger"],
         "correct_answer": 1
     },
     {
+        "image": "logo-acdc.jpg",
         "question": "Quel est l'album le plus vendu d'**AC/DC** ?",
         "propositions": ["Highway To Hell", "Back In Black", "Ballbreaker", "Black Ice"],
         "correct_answer": 2
@@ -32,7 +35,8 @@ if "nb_remaining_errors" not in st.session_state:
 if st.session_state.question_nb < len(list_quest_answ)+1 and st.session_state.nb_remaining_errors > 0:
     # Affichage de la question
     current_question = list_quest_answ[st.session_state.question_nb - 1]
-    st.write(f"Question {st.session_state.question_nb} : {current_question['question']}")
+    st.write(f"Question {st.session_state.question_nb}: {current_question['question']}")
+    st.image(f"assets/{current_question['image']}", width=300)
 
     # Affichage des options
     propositions = current_question["propositions"]
